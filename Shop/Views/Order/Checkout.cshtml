@@ -1,0 +1,48 @@
+﻿@model Order
+
+<div class="row">
+    <h3>Оформление заказа</h3>
+
+    <form asp-action="Checkout" method="post">
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label asp-for="email"></label>
+                <input asp-for="email" class="form-control" id="inputEmail" placeholder="Email">
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label asp-for="lastName"></label>
+                <input asp-for="lastName" class="form-control" id="inputLastName" placeholder="Фамилия">
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="firstName"></label>
+                <input asp-for="firstName" class="form-control" id="inputFirstName" placeholder="Имя">
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-row row">
+            <div class="form-group col-md-6">
+                <label asp-for="adress"></label>
+                <input asp-for="adress" class="form-control" id="inputAddress" placeholder="ул. Пушкина 1">
+                <span asp-validation-for="email" class="text-danger"></span>
+            </div>
+            <div class="form-group col-md-6">
+                <label asp-for="phone"></label>
+                <input asp-for="phone" class="form-control" id="inputPhone" placeholder="0631234567"/>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck" required>
+                <label class="form-check-label" for="gridCheck">
+                    Подтвердить информацию
+                </label>
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Оформить заказ</button>
+    </form>
+</div>
+ 

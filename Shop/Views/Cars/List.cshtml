@@ -1,0 +1,28 @@
+﻿<h1>Все автомобили</h1>
+
+<div class="container">
+    <div class="dropdown">
+        <button class="btn btn-outline-primary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="true">
+            Фильтры
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="/Cars/List">Все</a></li>
+            <li><a class="dropdown-item" href="/Cars/List/petrol">Бензиновые</a></li>
+            <li><a class="dropdown-item" href="/Cars/List/diesel">Дизельные</a></li>
+            <li><a class="dropdown-item" href="/Cars/List/electro">Электромобили</a></li>
+            <li><a class="dropdown-item" href="/Cars/List/hybrid">Гибриды</a></li>
+        </ul>
+    </div>
+    <h3>@Model.curCategory</h3>
+</div>
+
+
+<div class="row mt-5 mb-2">
+    @{
+        foreach (Car car in Model.allCars)
+        {
+            @Html.Partial("AllCars", car)
+        }
+    }
+</div>
+
